@@ -1,7 +1,7 @@
 # idms-python-projects
 projects for 3 week internship at IDMS
 
-# program 1 "web-scraping.py"
+# program 1 ["web-scraping.py"](https://github.com/SentientToast1/idms-python-projects/main/web-scraping.py)
 Extracts the top 5 news and their headlines and stores them in a txt file
 
 # program 2 "sheet-automation.py"

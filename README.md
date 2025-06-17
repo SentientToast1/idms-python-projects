@@ -15,3 +15,6 @@ reads a sales csv file, removes blank or incomplete entries and outputs a report
 
 # program 4 "weather-json.py"
 gets weather data in JSON form, goes through a list of cities and outputs relevant data to a .csv
+
+# program 5 "black-and-white.py"
+takes in a normal image and converts it to black and white

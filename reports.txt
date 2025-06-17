@@ -1,0 +1,5 @@
+Highest Sales:-
+A4 Paper: 10000
+Lowest Sales:-
+Pencil: 2500
+products sold: 4

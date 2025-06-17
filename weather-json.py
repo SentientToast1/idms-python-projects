@@ -1,7 +1,7 @@
 import requests, csv
 
 
-APIKEY = "4becc19e59e7ea573149a58953bfaa4e"
+APIKEY = ""
 OUTPUTCSV = "temperature.csv"
 
 def main():

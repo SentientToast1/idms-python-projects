@@ -12,7 +12,7 @@ browser.get('https://www.business-standard.com/finance/news')
 
 articleList = browser.find_elements(By.CLASS_NAME, "cardlist") #finds all the articles on the page
 
-with open("top 5 news.txt", 'w') as file:   #prints them from the returned list one by one
+with open("top 5 news.txt", 'w',encoding='utf-8') as file:   #prints them from the returned list one by one
     for i in range(5):
                        
         file.write(articleList[i].text + '\n\n')

@@ -2,7 +2,7 @@ import requests, csv
 
 
 APIKEY = ""
-OUTPUTCSV = "temperature.csv"
+OUTPUTCSV = "weather.csv"
 
 def main():
     if APIKEY != "":

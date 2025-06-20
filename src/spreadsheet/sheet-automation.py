@@ -1,6 +1,9 @@
 import openpyxl as opx
 import os
-wb = opx.load_workbook('intern_list.xlsx')
+import src.paths as paths
+
+
+wb = opx.load_workbook(paths.SPREADSHEET)
 
 sheet = wb.active
 
@@ -44,7 +47,7 @@ def addEntry():
     sheet['B' + row] = joinDate
     sheet['C' + row] = duration
     sheet['D' + row] = project
-    wb.save('intern_list.xlsx')
+    wb.save(paths.SPREADSHEET)
 
 def modEntry():
     data = ""
@@ -79,7 +82,7 @@ def modEntry():
             continue
         else:
             break
-    wb.save('intern_list.xlsx')
+    wb.save(paths.SPREADSHEET)
 
 def main():
     while True:

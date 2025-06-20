@@ -1,10 +1,7 @@
 import csv
- 
-FILENAME = "products.csv"
-REPORTFILE = "reports.txt"
-OUTPUTCSV = "products-cleaned.csv"
+import src.paths as paths
 
-with open(FILENAME,'r') as file:
+with open(paths.SALESCSV,'r') as file:
     reader = list(csv.reader(file))
 
 
@@ -36,10 +33,10 @@ products.sort(key=lambda x : x[1])
 
 reportTxt = f'Highest Sales:-\n{products[-1][0]}: {products[-1][1]}\nLowest Sales:-\n{products[0][0]}: {products[0][1]}\nproducts sold: {len(products)}'
 
-with open(REPORTFILE, 'w', newline='') as report:
+with open(paths.REPORTS, 'w', newline='') as report:
     report.write(reportTxt)
 
-with open(OUTPUTCSV, 'w', newline="") as file:
+with open(paths.SALESCSVOUT, 'w', newline="") as file:
     writer = csv.writer(file)
     writer.writerows(new_rows)
 

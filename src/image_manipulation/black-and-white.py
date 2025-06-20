@@ -1,12 +1,10 @@
 from PIL import Image
-
-ORIGINALIMAGE = "img.jpeg"
-
-OUTPUTIMAGE = "modifiedimg.jpg"
+import src.paths as paths
 
 
 
-img = Image.open(ORIGINALIMAGE)
+
+img = Image.open(paths.ORIGINALIMAGE)
 rgb_img = img.convert('RGB')
 width, height = rgb_img.size
 imgMod = Image.new('RGB',(width,height),color = (0,0,0))
@@ -18,4 +16,4 @@ for i in range(height):
        avg = int((r + g + b)/3)
        imgMod.putpixel((j,i),(avg,avg,avg))
 
-imgMod.save(OUTPUTIMAGE)
+imgMod.save(paths.OUTPUTIMAGE)

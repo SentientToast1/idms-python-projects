@@ -1,11 +1,12 @@
 from email.message import EmailMessage
 import ssl
 import smtplib
+import src.paths as paths
 
+fromMail = paths.FROMMAIL
+appPassword = paths.EMAILPASS
+toMail = paths.TOMAIL
 
-fromMail = ''
-appPassword = ''
-toMail = ''
 
 
 
@@ -13,7 +14,7 @@ toMail = ''
 subject = 'Top 5 news of today'
 
 
-with open("top 5 news.txt",'r') as file:
+with open(paths.NEWSFILE,'r') as file:
     body = file.read()
 
 em = EmailMessage()

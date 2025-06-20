@@ -1,11 +1,8 @@
 import requests, csv
-
-
-APIKEY = ""
-OUTPUTCSV = "weather.csv"
+import src.paths as paths
 
 def main():
-    if APIKEY != "":
+    if paths.OPENWEATHERAPI != "":
         cities = ["London","Austin","Paris","Jakarta"]
         location = []
         weatherDescript = []
@@ -14,12 +11,12 @@ def main():
         ptr = 0
         for x in cities:
             #gets latitude and longitude
-            geoCodeUrl = f'http://api.openweathermap.org/geo/1.0/direct?q={x}&appid={APIKEY}'
+            geoCodeUrl = f'http://api.openweathermap.org/geo/1.0/direct?q={x}&appid={paths.OPENWEATHERAPI}'
             response = requests.get(geoCodeUrl)
             geocodeData = response.json()
             location.append((geocodeData[0]["lat"],geocodeData[0]["lon"]))
             #gets the weather
-            getWeatherUrl = f'https://api.openweathermap.org/data/2.5/weather?lat={location[ptr][0]}&lon={location[ptr][1]}&appid={APIKEY}&units=metric'
+            getWeatherUrl = f'https://api.openweathermap.org/data/2.5/weather?lat={location[ptr][0]}&lon={location[ptr][1]}&appid={paths.OPENWEATHERAPI}&units=metric'
             response = requests.get(getWeatherUrl)
             weatherData = response.json()
             weatherDescript.append(weatherData["weather"][0]["description"])
@@ -33,7 +30,7 @@ def main():
             finalRows.append([cities[x],str(feelsLikeTemp[x])+"C",str(huimidity[x])+"%"])
 
 
-        with open(OUTPUTCSV,'w',newline="") as file:
+        with open(paths.WEATHER,'w',newline="") as file:
             writer = csv.writer(file)
             writer.writerows(finalRows)
 

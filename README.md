@@ -34,3 +34,8 @@ takes in a normal image and converts it to black and white
 
 ## program 6 "src.web_and_email.email-automation"
 sends contents of a .txt file through email
+
+<br>
+
+## program 7 "src.scheduling.schedule-management"
+checks a defined schedule in schedule.json and gives popups on time and closes after finishing all tasks 

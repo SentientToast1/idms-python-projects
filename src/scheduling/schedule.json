@@ -1,0 +1,22 @@
+[
+    {
+        "Name" : "Start Work",
+        "Time" : "00:04",
+        "Description" : "Start your work now"
+    },
+    {
+        "Name" : "Team Meeting",
+        "Time" : "00:05",
+        "Description" : "You have a meeting to attend"
+    },
+    {
+        "Name" : "Code Review",
+        "Time" : "00:06",
+        "Description" : "Review the code written today"
+    },
+    {
+        "Name" : "Wrap Up",
+        "Time" : "00:07",
+        "Description" : "Day Ended"
+    }
+] 

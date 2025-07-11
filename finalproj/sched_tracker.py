@@ -60,7 +60,7 @@ def listTasks():
     for i in range(entries):
         print(f'{data[i]["date"].ljust(12)}\t{data[i]["data"]["name"].ljust(20)}\t{data[i]["data"]["start"]}\t\t\t{data[i]["data"]["end"]}')
 
-def makeCSV():
+def makeReport():
     pass
 
 def clearFile():
